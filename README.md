@@ -1,13 +1,11 @@
 # 4.Execution_of_NetworkCommands
-
-# NAME : AADITHYA R
-# REGISTER NUMBER : 212223240001
-
+### Name: AADITHYA R
+### Register Number: 212223240001
 ## AIM :
-Use of Network commands in Real Time environment
-## Software :
+To use of Network commands in Real Time environment
+## Software : 
 Command Prompt And Network Protocol Analyzer
-## Procedure:
+## Procedure: 
 To do this EXPERIMENT- follows these steps:
 <BR>
 In this EXPERIMENT- students have to understand basic networking commands e.g cpdump, netstat, ifconfig, nslookup ,traceroute and also Capture ping and traceroute PDUs using a network protocol analyzer 
@@ -32,43 +30,48 @@ This commands includes
 <BR>
 • Other IP Commands e.g. show ip route etc.
 <BR>
-## Ppogram:
-CLIENT:
-```
-import socket 
-from pythonping import ping 
-s=socket.socket() 
-s.bind(('localhost'8000)) 
-s.listen(5) 
-c,addr=s.accept() 
-while True: 
-    hostname=c.recv(1024).decode() 
-    try: 
-        c.send(str(ping(hostname, verbose=False)).encode()) 
-    except KeyError: 
-        c.send("Not Found".encode())
-```
-SERVER:
-```
-import socket 
-s=socket.socket() 
-s.connect(('localhost',8000)) 
-while True: 
-    ip=input("Enter the website you want to ping ") 
-    s.send(ip.encode()) 
-    print(s.recv(1024).decode())
-```
-TRACEROUTE COMMAND:
-```
-from scapy.all import* 
-target = ["www.google.com"] 
-result, unans = traceroute(target,maxttl=32) 
-print(result,unans)
-```
+
 ## Output
-![image](https://github.com/23000966/4.Execution_of_NetworkCommends/assets/153983364/007703f5-9deb-4114-ad66-620b328ff7c0)
-![image](https://github.com/23000966/4.Execution_of_NetworkCommends/assets/153983364/87be1fb2-4958-46fb-8333-b12a5a1dfd5d)
-![image](https://github.com/23000966/4.Execution_of_NetworkCommends/assets/153983364/6d763869-698e-4ce4-985b-064d54e660b2)
+### netstat
+Command => netstat
+![Screenshot (130)](https://github.com/user-attachments/assets/8d1ed0f2-50be-438b-89ce-0fd3bb33f20d)
+
+### ipconfig
+Command => ipconfig
+![Screenshot (131)](https://github.com/user-attachments/assets/73daf0b6-c0e9-4836-89bb-e40d4b1c21eb)
+
+### ping
+Command => ping www.google.com
+![Screenshot (132)](https://github.com/user-attachments/assets/7b8213b5-5973-4c15-9cec-30e49cab03d1)
+
+### tracert
+Command =>  tracert www.google.com
+![Screenshot (133)](https://github.com/user-attachments/assets/46f9a5c5-4e8a-4d60-ac3f-dd564b64ade3)
+
+### nslookup
+Command => nslookup www.amazon.com
+![Screenshot (134)](https://github.com/user-attachments/assets/45a0dc3f-6c72-449c-84c1-1f13da8478aa)
+
+### getmac
+Command => getmac
+![Screenshot (135)](https://github.com/user-attachments/assets/730496ca-0937-479b-9511-6d8640c93288)
+
+### hostname
+Command => hostname
+![Screenshot (136)](https://github.com/user-attachments/assets/fb0237df-e710-4690-bf8b-1d0a25861289)
+
+### nbtstat
+Command => nbtstat
+![Screenshot (137)](https://github.com/user-attachments/assets/8513b791-e1f5-416a-91d1-a70458d58e5f)
+
+### arp
+Command => arp
+![Screenshot (138)](https://github.com/user-attachments/assets/e93dd361-4f1b-4fac-ad0c-592da3999e4f)
+
+### systeminfo
+Command => systeminfo
+![Screenshot (139)](https://github.com/user-attachments/assets/66cfee53-492d-47c1-ad9f-af5a448fe1f4)
+
 
 ## Result
 Thus Execution of Network commands Performed 
